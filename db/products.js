@@ -11,7 +11,7 @@ return this.products.find(product => product.code === code);
     static create(product) {
         product.id = uuidv1();
         this.products.push(product);
-        return product.is;
+        return product.id;
     }
     static update(productId, productUpdate) {
         const product = {...this.findById(productId), ...productUpdate};
